@@ -5,6 +5,7 @@
   <main class="container">
     <!-- <p>Jugador</p>-->
     <!-- el puntaje que vas obteniendo -->
+    <p class="record"> Record: {{ record }}</p>
     <div class="score">
       <p>Score: {{ score }}</p>
       <!-- las oportunidades que te quedan -->
@@ -27,15 +28,12 @@
       <!-- se hace el binding de un elemento al que llamamos pokemons y le pasamos el pokemon array que tenemos en la data -->
       <PokemonOptions :pokemons="pokemonArr" @selection="checkAnswer" />
       <div v-if="showAnswer">
-        <h2>{{
-          message
-        }}</h2>
+        <h2>{{ message }}</h2>
       </div>
       <button v-if="oportunidades === 0" @click="newGame">Nuevo juego</button>
 
       <!-- Puntaje máximo -->
     </div>
-    <p class="record"> Record: {{ record }}</p>
   </main>
 </template>
 
@@ -119,13 +117,14 @@ export default {
   //   }
   // },
 
-  //se crea el mounted ya que en este ejemplo lo que deseamos es que nuestro juego inicie una vez se abre la página
+  //se crea el mounted ya que en este ejemplo lo que deseamos es que nuestro juego inicie una vez se abre la página y apaerte tiene un sistema de record el cual se carga al inicio de la página
   mounted() {
     this.mixPokemonArray();
     if (localStorage.record) {
       this.record = localStorage.record;
     }
   },
+  //este watch es para que observe los cambios en el localStorage y actualice el record
   watch: {
     record(newRecord) {
       localStorage.record = newRecord;
