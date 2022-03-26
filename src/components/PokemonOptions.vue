@@ -1,5 +1,8 @@
+<!-- @format -->
+
 <template>
   <div class="options-container">
+    <!-- se agrega nuestro listado con un v-for para recorrer el arreglo de los pokemones -->
     <ul>
       <li
         v-for="pokemon in pokemons"
@@ -14,6 +17,7 @@
 
 <script>
 export default {
+  //se crea el props para indicar que recibiremos el elemento pokemons que es un objeto tpo array y es requerido
   props: {
     pokemons: {
       type: Array,
@@ -50,5 +54,8 @@ li {
 li:hover {
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
+}
+li:active {
+  background-color: green;
 }
 </style>

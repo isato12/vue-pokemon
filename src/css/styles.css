@@ -1,36 +1,52 @@
-html, body {
-    background-image: url('../assets/1475361156.blazingifrit_zoruaeevee_background.jpg');
-    /* background-image: url('../assets/269793.jpg'); */
-    /* background-position: center ; */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    
+/** @format */
+
+html,
+body {
+  background-image: url("../assets/1475361156.blazingifrit_zoruaeevee_background.jpg");
+  /* background-image: url('../assets/269793.jpg'); */
+  /* background-position: center ; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }
-.container{
-    max-width: 1200px;
-    width: 95%;
-    margin:0 auto;
+.container {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
 }
-h1{
-    font-weight: bolder;
-    color: red;
-    margin: 0;
-    padding: 0;
+h1 {
+  font-weight: bolder;
+  color: red;
+  margin: 0;
+  padding: 0;
 }
-h2{
-    color: red;
-    margin: 0;
-    padding: 0;
+h2 {
+  color: red;
+  margin: 0;
+  padding: 0;
 }
-.score{
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-    color: white;
+.score {
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-size: 20px;
 }
-.record{
-    color: white;
+.record {
+  color: black;
+  font-size: 20px;
+}
+.verde {
+  color: green;
+}
+.rojo {
+  color: red;
+}
+.fondo_verde {
+  background-color: green;
+}
+.fondo_rojo {
+  background-color: red;
 }

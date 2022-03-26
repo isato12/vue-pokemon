@@ -1,18 +1,16 @@
+<!-- @format -->
+
 <template>
   <div class="pokemon-container">
     <img :src="imgSrc" alt="Pokemon" class="hidden-pokemon" />
 
-    <img
-    v-if="showPokemon"
-      :src="imgSrc"
-      alt="Pokemon"
-      class="fade-in"
-    />
+    <img v-if="showPokemon" :src="imgSrc" alt="Pokemon" class="fade-in" />
   </div>
 </template>
 
 <script>
 export default {
+  //creamos props de elemntos dinamicos que se utilizaran
   props: {
     pokemonId: {
       type: Number,
@@ -24,6 +22,7 @@ export default {
       default: false,
     },
   },
+  //obtener imagen de manera dinamica
   computed: {
     imgSrc() {
       return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemonId}.svg`;
